@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Авторизація — Specificcom</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="auth-container">
+    <div class="tabs">
+      <button onclick="showTab('login')">Вхід</button>
+      <button onclick="showTab('register')">Реєстрація</button>
+    </div>
+
+    <div id="login" class="tab-content">
+      <h2>Вхід</h2>
+      <input type="email" placeholder="Email" />
+      <input type="password" placeholder="Пароль" />
+      <button>Увійти</button>
+    </div>
+
+    <div id="register" class="tab-content" style="display:none;">
+      <h2>Реєстрація</h2>
+      <input type="text" placeholder="Ім’я" />
+      <input type="email" placeholder="Email" />
+      <input type="password" placeholder="Пароль" />
+      <button>Зареєструватися</button>
+    </div>
+  </div>
+
+  <script>
+    function showTab(tabName) {
+      document.getElementById("login").style.display = (tabName === 'login') ? 'block' : 'none';
+      document.getElementById("register").style.display = (tabName === 'register') ? 'block' : 'none';
+    }
+  </script>
+</body>
+</html>
